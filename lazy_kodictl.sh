@@ -2,8 +2,8 @@
 
 # Install racket 6.6 if no racket is installed
 if ! type racket 2>&1 >/dev/null; then 
-    wget https://mirror.racket-lang.org/installers/6.6/racket-6.6-x86_64-linux.sh
-    sh racket-6.6-x86_64-linux.sh --unix-style --create-dir --dest /usr/
+    wget https://mirror.racket-lang.org/installers/6.6/racket-minimal-6.6-x86_64-linux.sh
+    sh racket-minimal-6.6-x86_64-linux.sh --unix-style --create-dir --dest /usr/
 fi
 
 # force install the json-rpc-client racket package if there is no checkout on disk 
