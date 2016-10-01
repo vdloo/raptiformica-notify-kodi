@@ -1,0 +1,15 @@
+{
+  "raptiformica_api_version": "0.1",
+  "platform": {
+    "default": {
+      "hooks": {
+        "cluster_change": {
+          "clean_up_gone_resources": {
+            "predicate": "/bin/true",
+            "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica 'Detected cluster change'"
+          }
+        }
+      }
+    }
+  }
+}
