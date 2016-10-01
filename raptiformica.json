@@ -6,31 +6,31 @@
         "cluster_change": {
           "notify_kodi_on_cluster_change": {
             "predicate": "/bin/true",
-            "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica \"$HOSTNAME detected a cluster change\""
+            "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh \"detected a cluster change\""
           }
         },
         "after_start_instance": {
 	  "notify_kodi_on_start_instance": {
             "predicate": "/bin/true",
-	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica \"$HOSTNAME booted a new machine\""
+	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh \"booted a new machine\""
 	  }
 	},
         "after_slave": {
 	  "notify_kodi_on_slave_instance": {
             "predicate": "/bin/true",
-	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica \"$HOSTNAME finished slaving a machine\""
+	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh \"finished slaving a machine\""
 	  }
 	},
         "after_assimilate": {
 	  "notify_kodi_on_meshnet_deploy": {
 	    "predicate": "/bin/true",
-	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica \"$HOSTNAME connected a new machine to the mesh\""
+	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh \"connected a new machine to the mesh\""
 	  }
 	},
         "after_mesh": {
 	  "notify_kodi_on_meshnet_join": {
 	    "predicate": "/bin/true",
-	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh notify raptiformica \"$HOSTNAME joined the meshnet\""
+	    "command": "sh ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh \"joined the meshnet\""
 	  }
 	}
       }

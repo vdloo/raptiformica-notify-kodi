@@ -18,7 +18,7 @@ If your Kodi host is not in the raptiformica network you might want to configure
 
 ```
 # edit the lazy_kodictl.sh wrapper
-vim ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh
+vim ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh
 # change this:
 racket kodictl/kodictl/main.rkt $@
 # to something like this:
