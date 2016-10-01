@@ -14,11 +14,11 @@ To install the module
 raptiformica modprobe vdloo/raptiformica-notify-kodi
 ```
 
-If your Kodi host is not in the raptiformica network you might want to configure the kodictl command to use a different endpoint than localhost. Note that each host in the network will then send a message to the same Kodictl instance.  
+If your Kodi host is not in the raptiformica network you might want to configure the kodictl command to use a different endpoint than localhost. Note that each host in the network will then send a message to the same Kodi instance.  
 
 ```
 # edit the lazy_kodictl.sh wrapper
-vim ~/.raptiformica/raptiformica-notify-kodi/lazy_kodictl.sh
+vim ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl.sh
 # change this:
 racket kodictl/main.rkt $@
 # to something like this:
