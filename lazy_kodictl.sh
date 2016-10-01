@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# move to a dir where we can check out some stuff
+mkdir -p /usr/etc/raptiformica-notify-kodi
+cd /usr/etc/raptiformica-notify-kodi
+
 # Install racket 6.6 if no racket is installed
 if ! type racket 2>&1 >/dev/null; then 
     wget https://mirror.racket-lang.org/installers/6.6/racket-minimal-6.6-x86_64-linux.sh
