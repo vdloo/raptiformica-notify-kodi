@@ -3,7 +3,7 @@
 # stop if something goes wrong
 set -e 
 
-if type kodictl 2>&1 >/dev/null; then 
+if type kodictl >/dev/null 2>&1; then 
   # if kodictl is already in the $PATH, use it
   kodictl notify "raptiformica `hostname`" "$@"
 else
@@ -12,7 +12,7 @@ else
   cd /usr/etc/raptiformica-notify-kodi
 
   # Install racket 6.6 if no racket is installed
-  if ! type racket 2>&1 >/dev/null; then 
+  if ! type racket >/dev/null 2>&1; then 
       wget -nc https://mirror.racket-lang.org/installers/6.6/racket-minimal-6.6-x86_64-linux.sh
       sh racket-minimal-6.6-x86_64-linux.sh --unix-style --create-dir --dest /usr/
   fi
