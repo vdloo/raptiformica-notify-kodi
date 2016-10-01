@@ -13,10 +13,12 @@ else
 
   # Install racket 6.6 if no racket is installed
   if ! type racket 2>&1 >/dev/null; then 
-      wget https://mirror.racket-lang.org/installers/6.6/racket-minimal-6.6-x86_64-linux.sh
+      wget -nc https://mirror.racket-lang.org/installers/6.6/racket-minimal-6.6-x86_64-linux.sh
       sh racket-minimal-6.6-x86_64-linux.sh --unix-style --create-dir --dest /usr/
-      raco pkg install --deps force srfi-lite-lib
   fi
+
+  # install srfi-lite-lib if it is not installed yet
+  raco pkg show | grep srfi-lite-lib || raco pkg install --deps force srfi-lite-lib
 
   # force install the json-rpc-client racket package if there is no checkout on disk 
   if [ ! -d json-rpc-client ]; then
