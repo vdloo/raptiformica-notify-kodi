@@ -20,7 +20,7 @@ If your Kodi host is not in the raptiformica network you might want to configure
 # edit the lazy_kodictl.sh wrapper
 vim ~/.raptiformica.d/modules/raptiformica-notify-kodi/lazy_kodictl_notification.sh
 # change this:
-racket kodictl/kodictl/main.rkt $@
+racket kodictl/kodictl/main.rkt notify "raptiformica `hostname`" "$@"
 # to something like this:
-racket kodictl/kodictl/main.rkt -r http://192.168.1.2:8080/jsonrpc $@
+racket kodictl/kodictl/main.rkt -r http://192.168.1.2:8080/jsonrpc notify "raptiformica `hostname`" "$@"
 ```
